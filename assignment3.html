@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+    <h1>Student Grading System</h1>
+    <label for="marks">Enter your marks (0-100):</label>
+    <input type="number" id="marks" name="marks" min="0" max="100">
+    <button onclick="determineGrade()">Get Grade</button>
+    <div id="result"></div>
+
+    <script>
+        function determineGrade() {
+            const marks = document.getElementById('marks').value;
+            const resultDiv = document.getElementById('result');
+            
+            const numericMarks = parseFloat(marks);
+
+            let grade;
+            if (numericMarks >= 90) {
+                grade = "A";
+            } else if (numericMarks >= 80) {
+                grade = "B";
+            } else if (numericMarks >= 70) {
+                grade = "C";
+            } else if (numericMarks >= 60) {
+                grade = "D";
+            } else if (numericMarks < 60) {
+                grade = "F";
+            } else {
+                grade = "Invalid marks entered.";
+            }
+            
+            // Display the grade
+            resultDiv.textContent = `Your grade is: ${grade}`;
+        }
+    </script>
+</body>
+</html>

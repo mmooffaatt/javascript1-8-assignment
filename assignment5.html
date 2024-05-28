@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+    <h1>Find the Day of the Week</h1>
+    <label for="dayNumber">Enter a number between 1 and 7:</label>
+    <input type="number" id="dayNumber" name="dayNumber" min="1" max="7">
+    <button onclick="printDayOfWeek()">Get Day</button>
+    <div id="result"></div>
+
+    <script>
+        function printDayOfWeek() {
+            const dayNum = document.getElementById('dayNumber').value;
+            const resultDiv = document.getElementById('result');
+            
+            const dayNumber = parseInt(dayNum, 10);
+            
+            let dayName;
+            switch (dayNumber) {
+                case 1:
+                    dayName = "Sunday";
+                    break;
+                case 2:
+                    dayName = "Monday";
+                    break;
+                case 3:
+                    dayName = "Tuesday";
+                    break;
+                case 4:
+                    dayName = "Wednesday";
+                    break;
+                case 5:
+                    dayName = "Thursday";
+                    break;
+                case 6:
+                    dayName = "Friday";
+                    break;
+                case 7:
+                    dayName = "Saturday";
+                    break;
+                default:
+                    dayName = "Invalid number. Please enter a number between 1 and 7.";
+            }
+            
+            resultDiv.textContent = `The day is: ${dayName}`;
+        }
+    </script>
+</body>
+</html>

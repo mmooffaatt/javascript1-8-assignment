@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+do {
+    var userInput = prompt("Enter a number greater than 100:");
+    userInput = parseFloat(userInput); 
+
+    if (isNaN(userInput) || userInput <= 100) {
+        alert("Please enter a valid number greater than 100.");
+    }
+} while (isNaN(userInput) || userInput <= 100);
+
+alert("You entered: " + userInput);  
+        </script>
+    </body>
+</html>
+
